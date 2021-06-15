@@ -1,0 +1,56 @@
+﻿@page "{id:int}"
+@model Project.NET.Pages.Shared.QuizResultModel
+@{
+}
+<h1>@Model.correctAnswersInt.Count out of @Model.quiz.questions.Count points!</h1>
+<br />
+@foreach (var item in Model.quiz.questions)
+{
+    if (Model.correctAnswersInt.Contains(item.id))
+    {
+        <div class="card" style="border-color: #68BBE3">
+            <div class="card-header" style="background-color: #055C9D;">
+                <text style="color:whitesmoke">@item.question</text>
+            </div>
+            <div class="card-footer" style="background-color: #0E86D4">
+                <text style="color:limegreen">@item.goodanswer</text>
+                <br />
+                <text style="color:whitesmoke">Correct answer!</text>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="card" style="border-color: #68BBE3">
+            <div class="card-header" style="background-color: #055C9D;">
+                <text style="color:whitesmoke">@item.question</text>
+            </div>
+
+            @switch(@Model.incorrectAnswersInt[item.id])
+            {
+            case 1:
+            <div class="card-footer" style="background-color: #0E86D4">
+                <text style="color: #810000">@item.badanswer1</text>
+                <br />
+                <text style="color:whitesmoke">Wrong, correct answer is: <text style="color:limegreen">@item.goodanswer</text></text>
+            </div>
+            break;
+            case 2:
+            <div class="card-footer" style="background-color: #0E86D4">
+                <text style="color: #810000 ">@item.badanswer2</text>
+                <br />
+                <text style="color:whitesmoke">Wrong, correct answer is:<text style="color:limegreen">@item.goodanswer</text></text>
+            </div>
+            break;
+            case 3:
+            <div class="card-footer" style="background-color: #0E86D4">
+                <text style="color: #810000">@item.badanswer3</text>
+                <br />
+                <text style="color:whitesmoke">Wrong, correct answer is: <text style="color:limegreen">@item.goodanswer</text></text>
+            </div>
+            break;
+            }
+
+        </div>
+    }
+}

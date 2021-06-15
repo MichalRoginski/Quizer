@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Project.NET</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body style="background-color: #68BBE3">
+    <header style="background-color: #0E86D4; color: #0E86D4">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3" style="background-color: #0E86D4">
+            <div class="container" style="background-color: #0E86D4; border-color: #055C9D">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">Quizer</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav w-100 justify-content-left">
+
+
+                    </ul>
+                    <ul class="navbar-nav w-100 justify-content-end">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li float:right class="nav-item">
+                                <a class="nav-link  text-dark" asp-area="" asp-page="/Admin/Question/Index">Questions</a>
+                            </li>
+                            <li float:right class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Admin/Quiz/Index">Quizes</a>
+                            </li>
+                            <li float:right class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Logout">Logout</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li float:right class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Login">Admin Login</a>
+                            </li>
+                        }
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container" style="background-color: #68BBE3">
+        <main role="main" class="pb-3" style="background-color: #68BBE3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer " style="background-color: #0E86D4 ">
+        <div class="container">
+            Time of page load:@ViewData["filterMessage"] - &copy; 2021 Michał Rogiński
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

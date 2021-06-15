@@ -1,0 +1,43 @@
+﻿@page
+@model DetailsQuizModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Quiz</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Quiz.name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Quiz.name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Quiz.numberOfQuestions)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Quiz.numberOfQuestions)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Quiz.category)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Quiz.category)
+        </dd>
+        @foreach (var item in Model.Quiz.questions)
+        {
+            <dd class="col-sm-10">
+                @item.question - @item.goodanswer
+            </dd>
+        }
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Quiz.id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

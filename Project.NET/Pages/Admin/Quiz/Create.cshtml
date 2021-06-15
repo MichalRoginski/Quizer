@@ -1,0 +1,59 @@
+﻿@page
+@model CreateQuizModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Quiz</h4>
+<hr />
+<form method="post">
+    <div class="row">
+        <div class="col-sm-4">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Quiz.name" class="control-label"></label>
+                <input asp-for="Quiz.name" class="form-control" />
+                <span asp-validation-for="Quiz.name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Quiz.numberOfQuestions" class="control-label"></label>
+                <input asp-for="Quiz.numberOfQuestions" class="form-control" />
+                <span asp-validation-for="Quiz.numberOfQuestions" class="text-danger"></span>
+
+
+            </div>
+            <div class="form-group">
+                <label asp-for="Quiz.category" class="control-label"></label>
+                <select asp-for="Quiz.category" class="form-control">
+                    @foreach (var item in Model.categories)
+                    {
+                        <option value=@item>@item</option>
+                    }
+                </select>
+                <span asp-validation-for="Quiz.category" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </div>
+        <div class="col-sm-8">
+
+            <div class="form-group">
+                <select class="form-control" asp-for="quizes" asp-items="Model.AreChecked" required style="height:300px"></select>
+            </div>
+
+        </div>
+
+    </div>
+</form>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

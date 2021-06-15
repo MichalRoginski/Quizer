@@ -1,0 +1,49 @@
+﻿@page
+@model DetailsQuestionModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Question</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Question.question)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Question.question)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Question.badanswer1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Question.badanswer1)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Question.badanswer2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Question.badanswer2)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Question.badanswer3)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Question.badanswer3)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Question.goodanswer)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Question.goodanswer)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Question.id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

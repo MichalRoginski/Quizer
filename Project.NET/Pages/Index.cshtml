@@ -1,0 +1,30 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="align-content-center">
+    <form method="post">
+        <div class="card-columns">
+            @foreach (var item in Model.quizes)
+            {
+                <div class="card" style="border-color: #68BBE3">
+                    <div class="card-header" style="background-color: #055C9D;">
+                        <text style="color:whitesmoke">@item.name</text>
+                    </div>
+                    <div class="card-footer" style="background-color: #0E86D4">
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <text style="color:whitesmoke">category: @item.category</text>
+                            </div>
+                            <div class="col-sm-4">
+                                <button id="quizId" name="quizId" type="submit" value=@item.id style="border-radius: 4px; background-color: #45B08C; border-color: #62C1A1 ">Take Quiz</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </form>
+</div>

@@ -1,0 +1,12 @@
+C:\Users\Bucik\Desktop\politechnika\.NET\Project.NET\EFCoreDataAccessLib\bin\Debug\net5.0\EFCoreDataAccessLib.deps.json
+C:\Users\Bucik\Desktop\politechnika\.NET\Project.NET\EFCoreDataAccessLib\bin\Debug\net5.0\EFCoreDataAccessLib.dll
+C:\Users\Bucik\Desktop\politechnika\.NET\Project.NET\EFCoreDataAccessLib\bin\Debug\net5.0\ref\EFCoreDataAccessLib.dll
+C:\Users\Bucik\Desktop\politechnika\.NET\Project.NET\EFCoreDataAccessLib\bin\Debug\net5.0\EFCoreDataAccessLib.pdb
+C:\Users\Bucik\Desktop\politechnika\.NET\Project.NET\EFCoreDataAccessLib\obj\Debug\net5.0\EFCoreDataAccessLib.csproj.AssemblyReference.cache
+C:\Users\Bucik\Desktop\politechnika\.NET\Project.NET\EFCoreDataAccessLib\obj\Debug\net5.0\EFCoreDataAccessLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bucik\Desktop\politechnika\.NET\Project.NET\EFCoreDataAccessLib\obj\Debug\net5.0\EFCoreDataAccessLib.AssemblyInfoInputs.cache
+C:\Users\Bucik\Desktop\politechnika\.NET\Project.NET\EFCoreDataAccessLib\obj\Debug\net5.0\EFCoreDataAccessLib.AssemblyInfo.cs
+C:\Users\Bucik\Desktop\politechnika\.NET\Project.NET\EFCoreDataAccessLib\obj\Debug\net5.0\EFCoreDataAccessLib.csproj.CoreCompileInputs.cache
+C:\Users\Bucik\Desktop\politechnika\.NET\Project.NET\EFCoreDataAccessLib\obj\Debug\net5.0\EFCoreDataAccessLib.dll
+C:\Users\Bucik\Desktop\politechnika\.NET\Project.NET\EFCoreDataAccessLib\obj\Debug\net5.0\ref\EFCoreDataAccessLib.dll
+C:\Users\Bucik\Desktop\politechnika\.NET\Project.NET\EFCoreDataAccessLib\obj\Debug\net5.0\EFCoreDataAccessLib.pdb
